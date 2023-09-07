@@ -2,10 +2,11 @@ const path=require('path');
 const adminroute=require('./routes/admin');
 const shoproute=require('./routes/shop');
 const contectus=require('./routes/contectus');
-const sucess=require('./routes/sucess')
+const sucess=require('./routes/sucess');
 const http = require('http');
 const express=require('express');
 const bodyparser=require('body-parser');
+const errorcontroller=require("./controller/404")
 
 
 const app=express();

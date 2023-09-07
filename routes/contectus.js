@@ -1,14 +1,10 @@
-const path=require('path');
 const express=require('express');
-const rootDir=require('../util/path');
+
 const router =express.Router();
+const getcontectus=require('../controller/contectus');
+const postcontectus=require('../controller/contectus')
 
 
-router.get('/contactus',(req,res,next)=>{
-    res.sendFile(path.join(rootDir,'views','contectus.html'));
-});
-router.post('/contactus',(req,res,next)=>{
-    console.log(req.body);
-    res.redirect('/sucess');
-});
+router.get('/contactus',getcontectus.getcontectus);
+router.post('/contactus',postcontectus.postcontectus);
 module.exports=router;
